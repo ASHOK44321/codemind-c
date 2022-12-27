@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int t,n,arr[100],i,j,sum=0,cout=0,k,l;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        cout=0;
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&arr[j]);
+        }
+        for(j=0;j<n;j++)
+        {
+            for(k=j+1;k<n;k++)
+            {
+                sum=0;
+                sum=arr[j]+arr[k];
+                for(l=0;l<n;l++)
+                {
+                    if(sum==arr[l])
+                    {
+                        cout++;
+                    }
+                }
+            }
+        }
+        if(cout>0)
+        printf("%d
+",cout);
+        else
+        printf("%d
+",-1);
+    }
+}
